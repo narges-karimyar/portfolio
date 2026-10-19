@@ -9,7 +9,7 @@ export default function Nav() {
     { label: "Home", href: "/" },
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#Contact" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (

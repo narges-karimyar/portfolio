@@ -3,7 +3,10 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Contact() {
   return (
     <>
-      <footer className="relative overflow-hidden border-t border-white/10 bg-[#09090B]">
+      <footer
+        id="contact"
+        className="relative overflow-hidden border-t border-white/10 bg-[#09090B]"
+      >
         {/* Blue blurred background */}
         <div className="pointer-events-none absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-blue-500/10 blur-[110px]" />
         <div className="pointer-events-none absolute -right-20 top-0 h-56 w-56 rounded-full bg-cyan-400/10 blur-[100px]" />
