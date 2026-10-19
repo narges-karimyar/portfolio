@@ -6,9 +6,9 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { label: "Home", href: "#Nav" },
+    { label: "Home", href: "/" },
     { label: "About", href: "#about" },
-    { label: "Projects", href: "#Projects" },
+    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#Contact" },
   ];
 

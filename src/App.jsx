@@ -1,12 +1,12 @@
-import InteractiveStarfieldHero from "./Components/InteractiveStarfieldHero";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Nav from "./Components/Nav";
 import About from "./Components/About";
-import images from "./Data/image";
 import Projects from "./Components/Projects";
-import ElasticStack from "./Components/ElasticStack";
 import Contact from "./Components/Contact";
+import More from "./Components/More";
 
-function App() {
+function Home() {
   return (
     <>
       <Nav />
@@ -14,6 +14,17 @@ function App() {
       <Projects />
       <Contact />
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/More" element={<More />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

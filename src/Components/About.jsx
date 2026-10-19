@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiMysql, SiBootstrap, SiMongodb } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import ElasticStack from "./ElasticStack";
@@ -90,6 +91,12 @@ export default function About() {
                 in Computer Science while expanding my skills in backend
                 development and databases such as MySQL.
               </p>
+              <Link to="/More">
+                <button className="text-balance text-5xl font-bold tracking-[-0.025em] text-white sm:text-6xl lg:text-xl">
+                  {" "}
+                  see more
+                </button>
+              </Link>
             </motion.div>
           </div>
 
@@ -118,63 +125,65 @@ export default function About() {
         </div>
 
         {/* Skills Section - Scroll Animation */}
-        <motion.div
-          className="relative mt-16 text-center sm:mt-20"
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.p
-            className="mb-3 text-sm tracking-[0.35em] text-blue-400"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            WHAT I WORK WITH
-          </motion.p>
-
-          <motion.h2
-            className="text-3xl font-bold sm:text-4xl"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-          >
-            MY <span className="text-blue-400">SKILLS</span>
-          </motion.h2>
-
-          <motion.p
-            className="mt-4 text-sm text-gray-400"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            Technologies I use to bring ideas to life.
-          </motion.p>
-
-          {/* Technology Icons */}
+        <div className="p-4 sm:p-6 md:p-12">
           <motion.div
-            className="mx-auto mt-8 max-w-3xl"
-            initial={{ opacity: 0, y: 45, scale: 0.95 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            className="relative mt-16 text-center sm:mt-20"
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              ease: "easeOut",
-            }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <ElasticStack
-              itemSize={76}
-              overlap={24}
-              pushForce={15}
-              items={skills}
-            />
+            <motion.p
+              className="mb-3 text-sm tracking-[0.35em] text-blue-400"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              WHAT I WORK WITH
+            </motion.p>
+
+            <motion.h2
+              className="text-3xl font-bold sm:text-4xl"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            >
+              MY <span className="text-blue-400">SKILLS</span>
+            </motion.h2>
+
+            <motion.p
+              className="mt-4 text-sm text-gray-400"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              Technologies I use to bring ideas to life.
+            </motion.p>
+
+            {/* Technology Icons */}
+            <motion.div
+              className="mx-auto mt-8 max-w-3xl"
+              initial={{ opacity: 0, y: 45, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: "easeOut",
+              }}
+            >
+              <ElasticStack
+                itemSize={76}
+                overlap={24}
+                pushForce={15}
+                items={skills}
+              />
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

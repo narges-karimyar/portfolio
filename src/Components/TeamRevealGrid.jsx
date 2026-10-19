@@ -274,9 +274,9 @@ export function TeamRevealGrid({
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="mt-2 inline-block text-xs text-blue-500 opacity-0 transition-opacity group-hover:opacity-100 hover:text-blue-400"
+                        className="mt-2 inline-block text-xs text-blue-500 opacity-100 transition-opacity hover:text-blue-400 md:opacity-100 lg:opacity-0 lg:group-hover:opacity-100"
                       >
-                        View repository ↗
+                        View project↗
                       </a>
                     )}
                   </div>
